@@ -83,8 +83,8 @@ export function BottomNav({ profile }: BottomNavProps) {
   }
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-gray-200 lg:hidden">
-      <div className="flex items-center justify-around h-16 px-2">
+    <nav className="fixed bottom-0 left-0 right-0 z-40 glass-bottomnav lg:hidden safe-area-bottom">
+      <div className="flex items-center justify-around h-[68px] px-1">
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = pathname === item.href || pathname.startsWith(item.href + '/')
@@ -97,12 +97,12 @@ export function BottomNav({ profile }: BottomNavProps) {
               key={item.href}
               href={item.href}
               className={cn(
-                'flex flex-col items-center justify-center gap-1 flex-1 py-2 px-1 rounded-lg transition-colors relative',
+                'flex flex-col items-center justify-center gap-0.5 flex-1 py-2 px-1 rounded-xl spring-hover relative',
                 isActive && !isAdminMenu && 'text-cobalt-600',
                 isActive && isAdminMenu && 'text-red-600',
                 !isActive && hasUnread && 'text-red-500',
-                !isActive && !isAdminMenu && !hasUnread && 'text-gray-600 hover:text-cobalt-600',
-                !isActive && isAdminMenu && 'text-gray-600 hover:text-red-600'
+                !isActive && !isAdminMenu && !hasUnread && 'text-gray-400 hover:text-cobalt-600',
+                !isActive && isAdminMenu && 'text-gray-400 hover:text-red-600'
               )}
             >
               <div className="relative">
@@ -116,11 +116,15 @@ export function BottomNav({ profile }: BottomNavProps) {
               </div>
               <span className={cn(
                 'text-[10px] font-medium',
-                isActive && 'font-semibold',
+                isActive && 'font-bold text-cobalt-600',
                 hasUnread && !isActive && 'text-red-500 font-semibold'
               )}>
                 {item.label}
               </span>
+              {/* 활성 인디케이터 */}
+              {isActive && !isAdminMenu && (
+                <div className="absolute -bottom-0.5 bottomnav-active-dot" />
+              )}
             </Link>
           )
         })}

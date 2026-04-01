@@ -89,8 +89,8 @@ export function DashboardHeader({ user, profile }: DashboardHeaderProps) {
   }
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-      <div className="px-4 lg:px-8">
+    <header className="sticky top-0 z-50 glass-header">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* 로고 & 사이드바 토글 */}
           <div className="flex items-center gap-3">
@@ -108,25 +108,14 @@ export function DashboardHeader({ user, profile }: DashboardHeaderProps) {
             </button>
 
             {/* 로고 */}
-            <Link href="/dashboard" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-cobalt-500 flex items-center justify-center shadow-cobalt-md">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  />
-                </svg>
+            <Link href="/dashboard" className="flex items-center gap-2.5 group">
+              <div className="relative w-10 h-10 rounded-xl bg-gradient-to-br from-cobalt-400 to-cobalt-600 flex items-center justify-center shadow-cobalt-md group-hover:shadow-cobalt-lg transition-shadow">
+                <span className="text-white font-bold text-lg">E</span>
+                <div className="absolute inset-0 rounded-xl bg-cobalt-500 blur-md opacity-30 -z-10 group-hover:opacity-50 transition-opacity" />
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-lg font-bold text-gray-900">EBS</h1>
-                <p className="text-xs text-gray-500">Education Builder Studio</p>
+                <h1 className="text-lg font-bold text-gray-900 tracking-tight">EduBuilder</h1>
+                <p className="text-[11px] text-gray-400 font-medium">AI 교육과정 설계 플랫폼</p>
               </div>
             </Link>
           </div>
@@ -141,30 +130,30 @@ export function DashboardHeader({ user, profile }: DashboardHeaderProps) {
             )}
 
             {/* 사용자 메뉴 */}
-            <div className="flex items-center gap-2 pl-3 border-l border-gray-200">
+            <div className="flex items-center gap-2 pl-3 border-l border-cobalt-100/50">
               <div className="hidden md:block text-right">
-                <p className="text-sm font-medium text-gray-900">
+                <p className="text-sm font-semibold text-gray-900">
                   {profile?.name || '이름 없음'}
                 </p>
-                <p className="text-xs text-gray-500">{user.email}</p>
+                <p className="text-[11px] text-gray-400">{user.email}</p>
               </div>
-              
-              <div className="flex items-center gap-1">
+
+              <div className="flex items-center gap-0.5">
                 {/* 메시지 버튼 */}
                 <button
                   onClick={() => router.push('/messages')}
                   className={cn(
-                    'p-2 rounded-lg transition-colors relative',
+                    'p-2 rounded-xl spring-hover relative',
                     unreadCount > 0
                       ? 'bg-red-50 hover:bg-red-100'
-                      : 'hover:bg-gray-100'
+                      : 'hover:bg-cobalt-50'
                   )}
                   title="메시지"
                   aria-label="메시지"
                 >
                   <MessageSquare className={cn(
                     'w-5 h-5',
-                    unreadCount > 0 ? 'text-red-500' : 'text-gray-600'
+                    unreadCount > 0 ? 'text-red-500' : 'text-gray-500'
                   )} />
                   <UnreadBadge count={unreadCount} />
                 </button>
@@ -172,17 +161,17 @@ export function DashboardHeader({ user, profile }: DashboardHeaderProps) {
                 {/* 프로필 버튼 */}
                 <button
                   onClick={() => router.push('/profile')}
-                  className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
+                  className="p-2 rounded-xl hover:bg-cobalt-50 spring-hover"
                   title="프로필"
                   aria-label="프로필"
                 >
-                  <UserIcon className="w-5 h-5 text-gray-600" />
+                  <UserIcon className="w-5 h-5 text-gray-500" />
                 </button>
 
                 {/* 로그아웃 버튼 */}
                 <button
                   onClick={handleLogout}
-                  className="p-2 rounded-lg hover:bg-red-50 text-red-600 transition-colors"
+                  className="p-2 rounded-xl hover:bg-red-50 text-gray-400 hover:text-red-500 spring-hover"
                   title="로그아웃"
                   aria-label="로그아웃"
                 >
@@ -194,21 +183,21 @@ export function DashboardHeader({ user, profile }: DashboardHeaderProps) {
         </div>
       </div>
 
-      {/* ⭐ 모바일 메뉴 드롭다운 (네비게이션 포함) */}
+      {/* 모바일 메뉴 드롭다운 */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-200 bg-white">
+        <div className="lg:hidden border-t border-cobalt-100/30 bg-white/95 backdrop-blur-xl">
           {/* 사용자 정보 */}
-          <div className="p-4 border-b border-gray-100">
+          <div className="p-4 border-b border-gray-100/50">
             <div className="flex items-center justify-between">
               <div>
-                <p className="font-medium text-gray-900">{profile?.name || '이름 없음'}</p>
-                <p className="text-sm text-gray-500">{user.email}</p>
+                <p className="font-semibold text-gray-900">{profile?.name || '이름 없음'}</p>
+                <p className="text-sm text-gray-400">{user.email}</p>
               </div>
               {profile?.rank && <RankBadge rank={profile.rank} size="sm" />}
             </div>
           </div>
 
-          {/* ⭐ 네비게이션 메뉴 */}
+          {/* 네비게이션 메뉴 */}
           <nav className="p-2">
             {navItems.map((item) => {
               const Icon = item.icon
@@ -221,17 +210,17 @@ export function DashboardHeader({ user, profile }: DashboardHeaderProps) {
                   href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={cn(
-                    'flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors mb-1',
-                    isActive && !isAdminMenu && 'bg-cobalt-500 text-white',
+                    'flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium spring-hover mb-1',
+                    isActive && !isAdminMenu && 'sidebar-item-active text-white',
                     isActive && isAdminMenu && 'bg-red-500 text-white',
-                    !isActive && !isAdminMenu && 'text-gray-700 hover:bg-gray-100',
+                    !isActive && !isAdminMenu && 'text-gray-600 hover:bg-cobalt-50/80 hover:text-cobalt-700',
                     !isActive && isAdminMenu && 'text-red-600 hover:bg-red-50'
                   )}
                 >
                   <Icon className="h-5 w-5" />
                   <span>{item.label}</span>
                   {isAdminMenu && !isActive && (
-                    <span className="ml-auto text-xs font-semibold px-2 py-0.5 bg-red-100 text-red-700 rounded">
+                    <span className="ml-auto text-[10px] font-bold px-2 py-0.5 bg-red-100 text-red-600 rounded-md tracking-wide">
                       ADMIN
                     </span>
                   )}

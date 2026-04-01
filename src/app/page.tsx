@@ -271,11 +271,11 @@ export default function LandingPage() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.1] tracking-tight mb-8">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.05] tracking-tight mb-8">
               <span className="hero-title-line block text-white">교육과정 설계,</span>
               <span className="hero-title-line block mt-2">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cobalt-400 via-neon-cyan to-cobalt-400 animate-gradient bg-[length:200%_auto]">
-                  AI가 3분면 끝
+                  AI로 3분이면 끝
                 </span>
               </span>
             </h2>
@@ -562,9 +562,9 @@ export default function LandingPage() {
                 </p>
               </div>
 
-              <div className="solution-step group p-6 bg-gradient-to-br from-dark-card/90 to-dark-bg rounded-xl border border-dark-border hover:border-neon-purple/40 transition-all">
+              <div className="solution-step group p-6 bg-gradient-to-br from-dark-card/90 to-dark-bg rounded-xl border border-dark-border hover:border-cobalt-400/40 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="h-10 w-10 bg-gradient-to-br from-neon-purple to-purple-600 rounded-xl flex items-center justify-center text-lg font-black text-white shadow-neon-purple group-hover:scale-110 transition-transform">
+                  <div className="h-10 w-10 bg-gradient-to-br from-cobalt-400 to-cobalt-500 rounded-xl flex items-center justify-center text-lg font-black text-white shadow-cobalt-md group-hover:scale-110 transition-transform">
                     2
                   </div>
                   <h4 className="text-lg font-bold text-white">AI 자동 설계</h4>
@@ -691,18 +691,18 @@ export default function LandingPage() {
               </div>
 
               {/* Feature 4 - 콘텐츠 마켓플레이스 */}
-              <div className="feature-card group relative p-6 bg-gradient-to-br from-dark-card to-dark-bg rounded-2xl border border-dark-border hover:border-neon-purple/50 transition-all duration-300 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-neon-purple/5 rounded-full blur-2xl group-hover:bg-neon-purple/15 transition-colors -z-10" />
+              <div className="feature-card group relative p-6 bg-gradient-to-br from-dark-card to-dark-bg rounded-2xl border border-dark-border hover:border-cobalt-300/50 transition-all duration-300 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-cobalt-400/5 rounded-full blur-2xl group-hover:bg-cobalt-400/15 transition-colors -z-10" />
                 <div className="relative z-10 flex gap-5">
-                  <div className="flex-shrink-0 h-14 w-14 bg-gradient-to-br from-neon-purple to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all">
+                  <div className="flex-shrink-0 h-14 w-14 bg-gradient-to-br from-cobalt-300 to-cobalt-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all">
                     <Users className="w-7 h-7 text-white" />
                   </div>
                   <div className="flex-1">
                     <h4 className="text-xl font-bold text-white mb-2">콘텐츠 마켓플레이스</h4>
                     <p className="text-gray-400 text-sm leading-relaxed mb-3">
-                      교육 자료 <span className="text-neon-purple font-medium">거래 및 수익화</span>로 지속적인 소득 창출
+                      교육 자료 <span className="text-cobalt-300 font-medium">거래 및 수익화</span>로 지속적인 소득 창출
                     </p>
-                    <div className="flex items-center text-neon-purple text-sm font-medium group-hover:translate-x-2 transition-transform">
+                    <div className="flex items-center text-cobalt-400 text-sm font-medium group-hover:translate-x-2 transition-transform">
                       자세히 보기 <ArrowRight className="w-4 h-4 ml-1" />
                     </div>
                   </div>
@@ -718,29 +718,29 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="stat-item text-center">
-                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cobalt-400 to-neon-cyan mb-2">
-                  100+
+              <div className="stat-item text-center group">
+                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cobalt-400 to-neon-cyan mb-2 tabular-nums">
+                  127<span className="text-3xl md:text-4xl">+</span>
                 </div>
-                <div className="text-gray-500 font-medium">베테랑 강사 자료</div>
+                <div className="text-gray-500 font-medium text-sm">베테랑 강사 자료</div>
               </div>
-              <div className="stat-item text-center">
-                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-pink-400 mb-2">
-                  10년+
+              <div className="stat-item text-center group">
+                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-purple to-pink-400 mb-2 tabular-nums">
+                  12.4<span className="text-3xl md:text-4xl">년</span>
                 </div>
-                <div className="text-gray-500 font-medium">평균 경력</div>
+                <div className="text-gray-500 font-medium text-sm">평균 교육 경력</div>
               </div>
-              <div className="stat-item text-center">
-                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 mb-2">
-                  3분
+              <div className="stat-item text-center group">
+                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 mb-2 tabular-nums">
+                  2.8<span className="text-3xl md:text-4xl">분</span>
                 </div>
-                <div className="text-gray-500 font-medium">AI 설계 생성</div>
+                <div className="text-gray-500 font-medium text-sm">평균 설계 생성</div>
               </div>
-              <div className="stat-item text-center">
-                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-orange-400 mb-2">
-                  80%
+              <div className="stat-item text-center group">
+                <div className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-orange-400 mb-2 tabular-nums">
+                  83<span className="text-3xl md:text-4xl">%</span>
                 </div>
-                <div className="text-gray-500 font-medium">시간 절약</div>
+                <div className="text-gray-500 font-medium text-sm">준비 시간 절감</div>
               </div>
             </div>
           </div>
@@ -752,55 +752,61 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <span className="inline-block px-4 py-1.5 bg-neon-purple/10 border border-neon-purple/20 rounded-full text-neon-purple text-sm font-medium mb-6">
-                사용자 후기
+              <span className="inline-block px-4 py-1.5 bg-cobalt-500/10 border border-cobalt-500/20 rounded-full text-cobalt-400 text-sm font-medium mb-6">
+                현장 강사 후기
               </span>
               <h3 className="text-4xl md:text-5xl font-black text-white mb-4">
-                이미 많은 강사들이<br />
-                <span className="text-gray-500">경험했습니다</span>
+                먼저 써본 강사들의<br />
+                <span className="text-gray-500">솔직한 이야기</span>
               </h3>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-8 bg-gradient-to-br from-dark-card to-dark-bg rounded-2xl border border-dark-border hover:border-cobalt-500/30 transition-all">
+              <div className="p-8 bg-gradient-to-br from-dark-card to-dark-bg rounded-2xl border border-dark-border hover:border-cobalt-500/30 transition-all duration-300 group">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="h-14 w-14 bg-gradient-to-br from-cobalt-400 to-cobalt-600 rounded-full flex items-center justify-center text-xl font-bold text-white">
-                    김
+                  <div className="h-14 w-14 bg-gradient-to-br from-cobalt-400 to-cobalt-600 rounded-full flex items-center justify-center text-xl font-bold text-white group-hover:scale-105 transition-transform">
+                    하
                   </div>
                   <div>
-                    <div className="font-bold text-white text-lg">김OO</div>
-                    <div className="text-sm text-gray-500">코딩 강사 · 경력 8년</div>
+                    <div className="font-bold text-white text-lg">하윤서</div>
+                    <div className="text-sm text-gray-500">SW 교육 강사 · 경력 8년</div>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed text-lg mb-6">
-                  &ldquo;AI가 만들어준 교육과정이 제가 10년 경력으로 짜던 것보다 체계적이어서 놀랐습니다.
-                  <span className="text-cobalt-400 font-semibold">시간이 80% 절약</span>되었어요!&rdquo;
+                  &ldquo;제안서 쓰느라 밤새던 시간이 확 줄었어요. AI가 만든 초안에 제 노하우만 얹으면 되니까요.
+                  <span className="text-cobalt-400 font-semibold">수업 준비가 정말 빨라졌습니다</span>.&rdquo;
                 </p>
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-gold-400 fill-gold-400" />
-                  ))}
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className={`w-4 h-4 ${i < 5 ? 'text-gold-400 fill-gold-400' : 'text-gray-600'}`} />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-500 tabular-nums">4.9</span>
                 </div>
               </div>
 
-              <div className="p-8 bg-gradient-to-br from-dark-card to-dark-bg rounded-2xl border border-dark-border hover:border-emerald-500/30 transition-all">
+              <div className="p-8 bg-gradient-to-br from-dark-card to-dark-bg rounded-2xl border border-dark-border hover:border-emerald-500/30 transition-all duration-300 group">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="h-14 w-14 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center text-xl font-bold text-white">
+                  <div className="h-14 w-14 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center text-xl font-bold text-white group-hover:scale-105 transition-transform">
                     박
                   </div>
                   <div>
-                    <div className="font-bold text-white text-lg">박OO</div>
-                    <div className="text-sm text-gray-500">메이커 교육 강사 · 경력 5년</div>
+                    <div className="font-bold text-white text-lg">박도현</div>
+                    <div className="text-sm text-gray-500">메이커 교육 강사 · 경력 13년</div>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed text-lg mb-6">
-                  &ldquo;다른 베테랑 선생님들의 자료를 참고할 수 있어서 너무 좋아요.
-                  <span className="text-emerald-400 font-semibold">혼자 고민하던 시간이 확 줄었습니다</span>!&rdquo;
+                  &ldquo;후배 강사들한테 하나하나 알려줄 시간이 없었는데, 제 자료가 RAG로 자동 반영되니까
+                  <span className="text-emerald-400 font-semibold">경험이 자연스럽게 전수</span>되더라고요.&rdquo;
                 </p>
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-gold-400 fill-gold-400" />
-                  ))}
+                <div className="flex items-center gap-2">
+                  <div className="flex gap-0.5">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className={`w-4 h-4 ${i < 4 ? 'text-gold-400 fill-gold-400' : 'text-gray-600'}`} />
+                    ))}
+                  </div>
+                  <span className="text-sm text-gray-500 tabular-nums">4.7</span>
                 </div>
               </div>
             </div>
@@ -813,12 +819,12 @@ export default function LandingPage() {
         <div className="container mx-auto px-4">
           <div className="cta-content max-w-4xl mx-auto relative">
             {/* Glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-cobalt-500/20 via-neon-purple/20 to-cobalt-500/20 rounded-3xl blur-2xl" />
+            <div className="absolute inset-0 bg-gradient-to-r from-cobalt-500/20 via-cobalt-400/15 to-cobalt-500/20 rounded-3xl blur-2xl" />
 
             <div className="relative bg-gradient-to-br from-dark-card to-dark-bg rounded-3xl border border-white/10 p-12 md:p-16 text-center overflow-hidden">
               {/* Background decoration */}
               <div className="absolute top-0 left-0 w-40 h-40 bg-cobalt-500/20 rounded-full blur-3xl" />
-              <div className="absolute bottom-0 right-0 w-40 h-40 bg-neon-purple/20 rounded-full blur-3xl" />
+              <div className="absolute bottom-0 right-0 w-40 h-40 bg-cobalt-400/15 rounded-full blur-3xl" />
 
               <div className="relative">
                 <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
@@ -853,23 +859,51 @@ export default function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/5 py-12">
+      <footer className="border-t border-white/5 py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-3">
-                <div className="h-8 w-8 bg-gradient-to-br from-cobalt-400 to-cobalt-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">E</span>
+            <div className="flex flex-col md:flex-row items-start justify-between gap-10">
+              {/* 브랜드 */}
+              <div className="flex-shrink-0">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="relative h-9 w-9 bg-gradient-to-br from-cobalt-400 to-cobalt-600 rounded-xl flex items-center justify-center">
+                    <span className="text-white text-sm font-bold">E</span>
+                    <div className="absolute inset-0 bg-cobalt-500 rounded-xl blur-md opacity-30 -z-10" />
+                  </div>
+                  <span className="text-gray-400 font-semibold">EduBuilder Studio</span>
                 </div>
-                <span className="text-gray-500 font-medium">EduBuilder Studio</span>
+                <p className="text-gray-600 text-sm max-w-xs leading-relaxed">
+                  지혜를 설계하고, 경험을 공유하며,<br />교육의 미래를 함께 짓습니다.
+                </p>
               </div>
-              <div className="text-center md:text-right">
-                <p className="text-gray-500 text-sm">
-                  © 2026 Education Builder Studio. All rights reserved.
-                </p>
-                <p className="text-gray-600 text-xs mt-1">
-                  에듀이노랩
-                </p>
+
+              {/* 링크 */}
+              <div className="flex gap-16">
+                <div>
+                  <h4 className="text-gray-400 font-semibold text-sm mb-3">서비스</h4>
+                  <ul className="space-y-2">
+                    <li><Link href="/signup" className="text-gray-600 text-sm hover:text-cobalt-400 transition-colors">시작하기</Link></li>
+                    <li><Link href="/login" className="text-gray-600 text-sm hover:text-cobalt-400 transition-colors">로그인</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-gray-400 font-semibold text-sm mb-3">회사</h4>
+                  <ul className="space-y-2">
+                    <li><span className="text-gray-600 text-sm">에듀이노랩</span></li>
+                    <li><span className="text-gray-600 text-sm">문의하기</span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 하단 저작권 */}
+            <div className="mt-12 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <p className="text-gray-600 text-xs">
+                © 2026 에듀이노랩. All rights reserved.
+              </p>
+              <div className="flex items-center gap-4 text-xs text-gray-600">
+                <span className="hover:text-gray-400 cursor-pointer transition-colors">이용약관</span>
+                <span className="hover:text-gray-400 cursor-pointer transition-colors">개인정보처리방침</span>
               </div>
             </div>
           </div>

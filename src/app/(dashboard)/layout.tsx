@@ -32,19 +32,23 @@ export default async function DashboardLayout({
   const profile = await getProfile(user.uid)
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* 헤더 - ✅ user와 profile 둘 다 전달해야 함! */}
+    <div className="min-h-screen bg-premium-mesh relative">
+      {/* 배경 텍스처 레이어 */}
+      <div className="fixed inset-0 bg-grid-dots-light pointer-events-none" />
+      <div className="fixed inset-0 bg-noise-light pointer-events-none" />
+
+      {/* 헤더 */}
       <DashboardHeader user={user} profile={profile} />
 
-      <div className="container mx-auto px-4 py-4 lg:py-8">
-        <div className="grid gap-4 lg:grid-cols-[240px_1fr]">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
+        <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
           {/* 사이드바 (데스크톱) */}
           <aside className="hidden lg:block">
             <Sidebar profile={profile} />
           </aside>
 
           {/* 메인 콘텐츠 */}
-          <main className="pb-20 lg:pb-0">{children}</main>
+          <main className="pb-24 lg:pb-0">{children}</main>
         </div>
       </div>
 
